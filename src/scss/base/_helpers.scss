@@ -1,0 +1,13 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.stretched-link {
+  position: absolute;
+  z-index: 99;
+
+  display: block;
+
+  inset: 0;
+}

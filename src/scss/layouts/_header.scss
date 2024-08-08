@@ -1,0 +1,40 @@
+.header {
+  height: 6.8rem;
+  padding: 4.5rem 0 5rem 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .brand {
+    display: block;
+    height: 100%;
+  }
+
+  .nav-bar {
+    display: flex;
+    align-items: center;
+
+    font-family: Montserrat;
+    font-size: 2.4rem;
+    font-weight: 500;
+  }
+
+  .nav-list {
+    display: flex;
+    list-style: none;
+    gap: 5.7rem;
+  }
+
+  .nav-link {
+    display: block;
+
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+    &.active {
+      border-bottom: 2px solid #000;
+    }
+  }
+}

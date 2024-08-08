@@ -1,0 +1,12 @@
+.rental-cards {
+  display: flex;
+  flex-wrap: wrap;
+
+  border-radius: 2.5rem;
+  background: #f6f6f6;
+
+  row-gap: 5rem;
+  column-gap: 6rem;
+
+  padding: 5.6rem 5rem 4.3rem 5rem;
+}
