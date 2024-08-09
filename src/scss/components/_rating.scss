@@ -1,0 +1,25 @@
+.rating {
+  box-sizing: content-box;
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  height: 3rem;
+
+  .btn-star {
+    aspect-ratio: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    &:hover .star {
+      filter: brightness(80%);
+    }
+  }
+
+  .star {
+    height: 100%;
+    width: 100%;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,14 @@
+.tags {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+
+  .tag {
+    background: $primary-color;
+    color: #ffffff;
+    padding: 0.5rem 3rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-radius: 1rem;
+  }
+}
