@@ -18,21 +18,11 @@ function Rental() {
     <main className="rental">
       <div className="container">
         <Slideshow slides={rental.pictures} />
-        <div
-          className="info"
-          style={{ display: "flex", justifyContent: "space-between" }}
-        >
-          <div
-            className="info-rental"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}
-          >
+        <div className="info">
+          <div className="info-rental">
             <h2 className="title">{rental.title}</h2>
             <p className="location">{rental.location}</p>
-            <ul className="tags" style={{ display: "flex", listStyle: "none" }}>
+            <ul className="tags">
               {rental.tags.map((tag, index) => (
                 <li className="tag" key={index}>
                   {tag}
@@ -40,14 +30,7 @@ function Rental() {
               ))}
             </ul>
           </div>
-          <div
-            className="info-host"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-            }}
-          >
+          <div className="info-host">
             <Host {...rental.host} />
             <Rating value={rental.rating} />
           </div>
