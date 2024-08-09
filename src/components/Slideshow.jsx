@@ -23,12 +23,12 @@ function Slideshow({ slides, alt = "", startAt = 0 }) {
   return (
     <div className="slideshow">
       {slides.map((url, index) => (
-        <div
+        <img
           key={index}
           className={`slide ${index === current ? "active" : "inactive"}`}
-        >
-          {index === current && <img className="picture" src={url} alt={alt} />}
-        </div>
+          src={url}
+          alt={alt}
+        />
       ))}
       {n > 1 && (
         <>

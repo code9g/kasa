@@ -6,19 +6,14 @@
   border-radius: 2.5rem;
   background: #f6f6f673;
 
-  .picture {
+  .slide {
+    position: absolute;
+    opacity: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-  }
-
-  .slide {
-    position: absolute;
-    opacity: 0;
     transition: opacity 500ms ease-in-out;
-    width: 100%;
-    height: 100%;
 
     &.active {
       opacity: 1;
