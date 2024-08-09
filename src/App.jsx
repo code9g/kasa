@@ -7,7 +7,6 @@ import Rental from "./pages/Rental";
 import "./scss/main.scss";
 
 function App() {
-  console.log(process.env.NODE_ENV);
   const basename = process.env.NODE_ENV === "development" ? "/" : "/kasa";
   return (
     <BrowserRouter basename={basename}>
