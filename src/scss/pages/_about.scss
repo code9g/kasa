@@ -1,2 +1,20 @@
 .about {
+  .banner {
+    margin-bottom: 3.8rem;
+  }
+
+  .collapse {
+    margin-bottom: 3rem;
+
+    .toggle {
+      font-size: 2.4rem;
+      font-weight: 700;
+      padding: 1rem 2rem 1rem 1.5rem;
+    }
+
+    .content {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+  }
 }
