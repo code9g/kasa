@@ -7,8 +7,10 @@ import Rental from "./pages/Rental";
 import "./scss/main.scss";
 
 function App() {
+  console.log(process.env.NODE_ENV);
+  const basename = process.env.NODE_ENV === "development" ? "/" : "/kasa";
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<Navigate to="/home" />} />
