@@ -9,4 +9,10 @@
   column-gap: 6rem;
 
   padding: 5.6rem 5rem 4.3rem 5rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 0;
+  }
 }
