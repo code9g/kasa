@@ -8,11 +8,4 @@
       gap: 2.2rem;
     }
   }
-
-  @include breakpoint(mobile) {
-    .rental-card {
-      width: 100%;
-      max-width: 100%;
-    }
-  }
 }

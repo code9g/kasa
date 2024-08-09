@@ -1,35 +1,30 @@
 .rental-cards {
   display: grid;
   flex-wrap: wrap;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  grid-template-columns: repeat(3, 34rem);
+  justify-content: space-between;
 
   border-radius: 2.5rem;
   background: #f6f6f6;
 
   row-gap: 5rem;
-  column-gap: 4.8%;
 
   padding: 5.6rem 5rem 4.3rem 5rem;
 
-  @media (max-width: 1285px) {
+  @media (max-width: 1280px) {
     grid-template-columns: repeat(2, 1fr);
-
-    .rental-card {
-      max-width: 100%;
-    }
+    column-gap: 4rem;
+    row-gap: 4rem;
   }
 
-  @media (max-width: 870px) {
+  @media (max-width: 900px) {
     grid-template-columns: repeat(1, 1fr);
-
-    .rental-card {
-      max-width: 100%;
-    }
+    padding: 2.6 rem;
+    row-gap: 2rem;
   }
 
   @include breakpoint(mobile) {
-    row-gap: 2rem;
+    background: transparent;
     padding: 0;
   }
 }
