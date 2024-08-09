@@ -41,7 +41,7 @@ Puis lancez le projet:
 npm start
 ```
 
-<!-- Vous pouvez également tester l'application [ici](https://code9g.github.io/Kasa/) -->
+Vous pouvez également tester l'application [ici](https://code9g.github.io/Kasa/)
 
 [![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)](<[http://](https://github.com/code9g/)>)
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/pierre-andre-henry/)
