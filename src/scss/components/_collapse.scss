@@ -1,11 +1,12 @@
 .collapse {
   .toggle {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     width: 100%;
-    padding: 1rem 2rem 1rem 1.5rem;
+    padding: 1rem 2rem;
 
     background: $primary-color;
     color: #ffffff;
@@ -23,11 +24,18 @@
   }
 
   .arrow {
+    position: absolute;
+    height: 1.3em;
+
+    right: 1.3rem;
+    top: 50%;
+
+    transform: translateY(-50%);
     transition: transform 300ms ease;
   }
 
   &.open .arrow {
-    transform: scaleY(-1);
+    transform: translateY(-50%) scaleY(-1);
   }
 
   .content-parent {
