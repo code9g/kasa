@@ -1,7 +1,9 @@
 .rental-card {
   position: relative;
 
-  width: 34rem;
+  width: 100%;
+  max-width: 34rem;
+
   height: 34rem;
   border-radius: 1rem;
   overflow: hidden;
@@ -16,6 +18,10 @@
   background-color: $primary-color;
 
   transition: 200ms ease-in-out;
+
+  @include breakpoint(mobile) {
+    height: 25.5rem;
+  }
 
   &:hover {
     box-shadow: 4px 4px 24px 0px rgba(0, 0, 0, 0.35);
