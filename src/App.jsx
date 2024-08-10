@@ -1,4 +1,8 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import Layout from "./layouts/Layout";
 import About from "./pages/About";
 import Home from "./pages/Home";
@@ -6,22 +10,25 @@ import NotFound from "./pages/NotFound";
 import Rental from "./pages/Rental";
 import "./scss/main.scss";
 
-function App() {
-  // const basename = process.env.NODE_ENV === "development" ? "/" : "/kasa";
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
+        { path: "", element: <Navigate to="/home" /> },
+        { path: "home", element: <Home /> },
+        { path: "about", element: <About /> },
+        { path: "rental/:id", element: <Rental /> },
+        { path: "*", element: <NotFound /> },
+      ],
+    },
+  ],
+  { basename: "/kasa" }
+);
 
-  return (
-    <BrowserRouter basename="/kasa">
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/rental/:id" element={<Rental />} />
-          <Route path="*" element={<NotFound />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
