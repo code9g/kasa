@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logos/red.svg";
-import { cnActiveOrPending } from "../utils/tools";
 
 const links = [
   { to: "/home", title: "Accueil" },
@@ -18,7 +17,7 @@ function Header() {
           <ul className="nav-list">
             {links.map(({ to, title }, index) => (
               <li className="nav-item" key={index}>
-                <NavLink className={cnActiveOrPending("nav-link")} to={to}>
+                <NavLink className="nav-link" to={to}>
                   {title}
                 </NavLink>
               </li>
