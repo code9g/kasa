@@ -15,7 +15,7 @@ const routes = [
     path: "/",
     element: <Layout />,
     children: [
-      { path: "", element: <Navigate to="/home" /> },
+      { index: true, element: <Navigate to="/home" /> },
       { path: "home", element: <Home /> },
       { path: "about", element: <About /> },
       { path: "rental/:id", element: <Rental /> },
