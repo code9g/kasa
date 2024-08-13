@@ -1,10 +1,9 @@
-import rentals from "../utils/rentals";
 import RentalCard from "./RentalCard";
 
-function RentalCards() {
+function RentalCards({ list }) {
   return (
     <section className="rental-cards">
-      {rentals.map(({ id, cover, title }) => (
+      {list.map(({ id, cover, title }) => (
         <RentalCard key={id} id={id} cover={cover} title={title} />
       ))}
     </section>

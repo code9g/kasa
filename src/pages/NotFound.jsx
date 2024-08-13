@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
+import Error from "../components/Error";
 
 function NotFound() {
   return (
     <main className="not-found">
-      <div className="container">
-        <h2 className="title">404</h2>
-        <p className="message">Oups! La page que vous demandez n'existe pas.</p>
-        <Link className="link" to="/home">
-          Retourner sur la page d'accueil
-        </Link>
-      </div>
+      <Error
+        title="404"
+        message="Oups! La page que vous demandez n'existe pas."
+      />
     </main>
   );
 }

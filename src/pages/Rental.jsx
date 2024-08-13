@@ -1,15 +1,13 @@
-import { useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Collapse from "../components/Collapse";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
 import Slideshow from "../components/Slideshow.jsx";
-import rentals from "../utils/rentals";
-import NotFound from "./NotFound";
+import NotFound from "./NotFound.jsx";
 
 function Rental() {
-  const { id } = useParams();
+  const { rental } = useLoaderData();
 
-  const rental = rentals.find((item) => item.id === id);
   if (!rental) {
     return <NotFound />;
   }
