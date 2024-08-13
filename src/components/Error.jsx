@@ -14,7 +14,7 @@ function Error({ title, message, className, error = null }) {
         </p>
       )}
       {location.pathname !== "/home" && (
-        <Link className="link" to="/home">
+        <Link className="link" to="/">
           Retourner sur la page d'accueil
         </Link>
       )}

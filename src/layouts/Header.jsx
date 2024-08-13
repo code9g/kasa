@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logos/red.svg";
 
 const links = [
-  { to: "/home", title: "Accueil" },
+  { to: "/", title: "Accueil" },
   { to: "/about", title: "A propos" },
 ];
 

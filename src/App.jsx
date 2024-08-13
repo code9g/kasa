@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   createRoutesFromElements,
-  Navigate,
   Route,
   RouterProvider,
 } from "react-router-dom";
@@ -39,8 +38,7 @@ import { rentalLoader, rentalsLoader } from "./utils/loaders";
 const routes = createRoutesFromElements(
   <Route path="/" element={<Layout />}>
     <Route errorElement={<ErrorPage />}>
-      <Route index element={<Navigate to="/home" />} />
-      <Route path="home" element={<Home />} loader={rentalsLoader} />
+      <Route index element={<Home />} loader={rentalsLoader} />
       <Route path="about" element={<About />} />
       <Route path="rental/:id" element={<Rental />} loader={rentalLoader} />
       <Route path="*" element={<NotFound />} />
