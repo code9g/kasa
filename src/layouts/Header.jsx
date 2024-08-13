@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import logo from "../assets/logos/red.svg";
 
 const links = [
@@ -10,9 +10,9 @@ function Header() {
   return (
     <header className="header">
       <div className="container">
-        <a className="brand" href="/">
+        <Link className="brand" to="/">
           <img className="logo" src={logo} alt="Logo de Kasa" />
-        </a>
+        </Link>
         <nav className="nav-bar">
           <ul className="nav-list">
             {links.map(({ to, title }, index) => (
