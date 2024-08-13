@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 function Error({ title, message, className, error = null }) {
   const location = useLocation();
   return (
-    <div className="error container">
+    <div className="error">
       <h2 className="title">{title}</h2>
       <p className="message">{message}</p>
       {error && (
