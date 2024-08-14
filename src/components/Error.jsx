@@ -13,7 +13,7 @@ function Error({ title, message, className, error = null }) {
           <i>{error.statusText || error.message}</i>
         </p>
       )}
-      {location.pathname !== "/home" && (
+      {location.pathname !== "/" && (
         <Link className="link" to="/">
           Retourner sur la page d'accueil
         </Link>
