@@ -4,6 +4,7 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
+import Loader from "./components/Loader";
 import Layout from "./layouts/Layout";
 import About from "./pages/About";
 import ErrorPage from "./pages/ErrorPage";
@@ -49,7 +50,7 @@ const routes = createRoutesFromElements(
 const router = createBrowserRouter(routes, { basename: "/kasa" });
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} fallbackElement={<Loader />} />;
 }
 
 export default App;

@@ -1,0 +1,65 @@
+@use "sass:math";
+@use "sass:list";
+
+/***
+    Paramètres du loader
+***/
+$loader-delay: 150ms; // Délai de lancement de l'animation
+$loader-duration: 3s; // Durée d'affichage du loader
+$loader-interval: 2s; // Intervalle entre chaque cycle d'animation des points
+$loader-amount: 6; // Nombre de points
+$loader-radius: 4vmin; // Rayon
+$loader-colors: $primary-color, $secondary-color, $tertiary-color;
+
+.loader {
+  position: absolute;
+  z-index: 99;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.9);
+
+  .dot {
+    position: absolute;
+
+    width: $loader-radius * 2;
+    height: $loader-radius * 2;
+    top: calc(50vh - #{$loader-radius});
+    left: 50vw;
+
+    border-radius: $loader-radius;
+    border: 1px solid $foreground-color;
+    backface-visibility: hidden;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+
+    animation: dot-move $loader-interval cubic-bezier(0.4, 0, 1, 0.8) infinite;
+
+    transform-origin: ($loader-radius * -1) center;
+
+    @for $i from 1 through $loader-amount {
+      &-#{$i} {
+        background: nth($loader-colors, 1+ ($i % length($loader-colors)));
+        animation-delay: math.div($i, $loader-amount) * $loader-interval * -1;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+// Animation des cercles dans le loader
+@keyframes dot-move {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 1;
+    transform: scale(0) rotate(360deg);
+  }
+}

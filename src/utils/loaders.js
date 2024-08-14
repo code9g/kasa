@@ -1,12 +1,23 @@
 import rentals from "../data/rentals.json";
 
-export const rentalLoader = ({ params }) => ({
-  id: params.id,
-  rental: rentals.find((item) => item.id === params.id),
-});
+const RANDOM_DELAY = 1000;
 
-export const rentalsLoader = () => ({
-  sorted: "default",
-  filtered: false,
-  rentals: [...rentals],
-});
+const fakeNetwork = async (delay = null) =>
+  new Promise((res) => setTimeout(res, delay ?? Math.random() * RANDOM_DELAY));
+
+export const rentalLoader = async ({ params }) => {
+  await fakeNetwork();
+  return {
+    id: params.id,
+    rental: rentals.find((item) => item.id === params.id),
+  };
+};
+
+export const rentalsLoader = async () => {
+  await fakeNetwork();
+  return {
+    sorted: "default",
+    filtered: false,
+    rentals: [...rentals],
+  };
+};
