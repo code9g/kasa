@@ -1,8 +1,7 @@
-import PropTypes from "prop-types";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-function Error({ title, message, className, error = null }) {
+function Error({ title, message, error = null }) {
   const location = useLocation();
   return (
     <div className="error">
@@ -21,10 +20,5 @@ function Error({ title, message, className, error = null }) {
     </div>
   );
 }
-
-Error.propTypes = {
-  title: PropTypes.string.isRequired,
-  message: PropTypes.string,
-};
 
 export default Error;

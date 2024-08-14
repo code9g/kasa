@@ -20,6 +20,4 @@ function ErrorPage() {
   );
 }
 
-ErrorPage.propTypes = {};
-
 export default ErrorPage;
