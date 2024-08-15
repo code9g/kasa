@@ -5,6 +5,10 @@
   font-size: 2.4rem;
   font-weight: 500;
 
+  @include breakpoint(tablet) {
+    font-size: 1.8rem;
+  }
+
   @include breakpoint(mobile) {
     height: 4.7rem;
     font-size: 1.2rem;
@@ -35,8 +39,9 @@
     list-style: none;
     gap: 5.7rem;
 
-    @include breakpoint(mobile) {
+    @include breakpoint(tablet) {
       gap: 2.6rem;
+      text-transform: uppercase;
     }
   }
 
