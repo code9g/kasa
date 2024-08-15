@@ -29,7 +29,7 @@ function About() {
   return (
     <main className="about">
       <div className="container">
-        <Banner background={bg} slogan="" />
+        <Banner background={bg} />
         {abouts.map(({ title, content }, index) => (
           <Collapse key={index} title={title}>
             <p>{content}</p>
