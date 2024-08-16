@@ -10,11 +10,11 @@ function ErrorPage() {
   return (
     <main className="error-page">
       <div className="container">
-        <Error
-          title="Oups !"
-          message="Une erreur innatende a eu lieu !"
-          error={error}
-        />
+        <Error title="Oups !" message="Une erreur innatende a eu lieu !">
+          <p className="message">
+            <i>{error.statusText || error.message}</i>
+          </p>
+        </Error>
       </div>
     </main>
   );
